@@ -1,5 +1,7 @@
-#' plot individual scores (either Elo or David)
-#'
+#' plot posteriors of individual scores 
+#' 
+#' either summed winning probabilities or David's scores
+#' 
 #' @param x result from \code{\link{elo_steepness_from_matrix}},
 #'        \code{\link{elo_steepness_from_sequence}} or
 #'        \code{\link{davids_steepness}}
@@ -47,7 +49,7 @@ plot_scores <- function(x,
     for (i in seq_len(ncol(res))) {
       res[, i] <- y[, , i]
     }
-    xlab <- "cumulative Elo winning probability"
+    xlab <- "summed Elo winning probability"
     correct_object <- TRUE
   }
   if ("norm_ds" %in% names(x)) {
