@@ -24,7 +24,7 @@ data("dommats", package = "EloRating")
 mat <- dommats$badgers
 
 ## ----badgermatrix, fig.retina= 2, echo=FALSE, fig.width=6, fig.height=2.8, out.width="50%", fig.align="center", fig.cap="An example network of seven badgers."----
-par(family = "serif", mar = c(0.1, 1.6, 1.1, 0.1))
+par(family = "serif", mar = c(0.1, 1.6, 1.1, 0.1), cex = 1.3)
 EloSteepness:::plot_matrix(mat, greyout = 0)
 
 ## ---- echo=FALSE--------------------------------------------------------------
